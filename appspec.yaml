@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:183686979203:task-definition/aws-hello-world-rest-api:1"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:230536472264:task-definition/aws-currency-conversion-28:5"
         LoadBalancerInfo:
-          ContainerName: "aws-hello-world-rest-api"
+          ContainerName: "CURRENCY_EXCHANGE_URI"
           ContainerPort: "80"
         PlatformVersion: "LATEST"
