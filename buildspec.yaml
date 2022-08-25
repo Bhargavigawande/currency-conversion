@@ -9,9 +9,10 @@ phases:
     - IMAGE_URI=${REPOSITORY_URI}:${TAG}
   build:
     commands:
-    - echo " pulling the dockerr image"
-    - docker pull in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT
-    - docker tag in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT $IMAGE_URI 
+    - echo Build started on `date`
+    - echo $IMAGE_URI
+    - docker pull in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT .
+    - docker tag in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT $IMAGE_URI .
   post_build:
     commands:
     - printenv
